@@ -1,0 +1,94 @@
+{
+    "name": "PinballInput",
+    "maps": [
+        {
+            "name": "Default",
+            "id": "f8f30d0f-c817-4ee1-9b8a-7f5e6bf7a84c",
+            "actions": [
+                {
+                    "name": "Flipper Left",
+                    "type": "Button",
+                    "id": "6cf24b8d-98c9-4291-ba92-dc3d98f8f956",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Flipper Right",
+                    "type": "Button",
+                    "id": "6d20c917-20ab-403d-8ab7-1967fd82ce7a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Flipper Top",
+                    "type": "Button",
+                    "id": "b12d37d8-da5f-410d-a3a5-a6e732dad008",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Launch Ball",
+                    "type": "Button",
+                    "id": "d9c7eff8-aa32-4355-821d-06fb379144db",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "fe699d34-513d-4371-af1a-123c7f2eca25",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Flipper Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b16dbf4b-19c6-4427-abcc-1e192368cd87",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Flipper Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "009b2555-0147-4d41-8d61-238b4d350e9e",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Flipper Top",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cd117d69-cd4e-4030-8d5f-0f0c883cd0ad",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Launch Ball",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
