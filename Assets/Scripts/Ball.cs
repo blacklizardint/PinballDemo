@@ -14,4 +14,11 @@ public class Ball : MonoBehaviour {
     public void Launch() {
         rb.AddForce(Vector3.forward * launchForce, ForceMode.Impulse);
     }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("BallEnd")) {
+            transform.position = GameObject.FindGameObjectWithTag("BallStart").transform.position;
+            rb.velocity = Vector3.zero;
+        }
+    }
 }
