@@ -21,4 +21,11 @@ public class Ball : MonoBehaviour {
             rb.velocity = Vector3.zero;
         }
     }
+    private void OnCollisionEnter(Collision collision) {
+        print("you collided");
+        var bumper = collision.gameObject.GetComponent<Bumper>();
+        if (bumper != null) {
+            bumper.Bump();
+        }
+    }
 }
