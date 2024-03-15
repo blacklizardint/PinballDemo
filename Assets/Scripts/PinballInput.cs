@@ -25,12 +25,12 @@ public partial class @PinballInput: IInputActionCollection2, IDisposable
     ""maps"": [
         {
             ""name"": ""Default"",
-            ""id"": ""f8f30d0f-c817-4ee1-9b8a-7f5e6bf7a84c"",
+            ""id"": ""b51cf4c7-573c-4ca7-9f8d-e7d1c29bca3e"",
             ""actions"": [
                 {
-                    ""name"": ""Flipper Left"",
+                    ""name"": ""Launch Ball"",
                     ""type"": ""Button"",
-                    ""id"": ""6cf24b8d-98c9-4291-ba92-dc3d98f8f956"",
+                    ""id"": ""d32de800-59bd-46b7-b174-df0e9ab37cc5"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -39,25 +39,16 @@ public partial class @PinballInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Flipper Right"",
                     ""type"": ""Button"",
-                    ""id"": ""6d20c917-20ab-403d-8ab7-1967fd82ce7a"",
+                    ""id"": ""2eaf10c7-ec5a-4467-ad8d-6e87e4d5cf9f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Flipper Top"",
+                    ""name"": ""Flipper Left"",
                     ""type"": ""Button"",
-                    ""id"": ""b12d37d8-da5f-410d-a3a5-a6e732dad008"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Launch Ball"",
-                    ""type"": ""Button"",
-                    ""id"": ""d9c7eff8-aa32-4355-821d-06fb379144db"",
+                    ""id"": ""df61139e-3dea-4a8c-9438-28fd696b2ba6"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -67,18 +58,18 @@ public partial class @PinballInput: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""fe699d34-513d-4371-af1a-123c7f2eca25"",
-                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""id"": ""df23a442-f801-42f9-998a-f57a601a43b0"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Flipper Left"",
+                    ""action"": ""Launch Ball"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""b16dbf4b-19c6-4427-abcc-1e192368cd87"",
+                    ""id"": ""d8074dda-8f18-4450-aa7e-2e37ed6400b2"",
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -89,23 +80,34 @@ public partial class @PinballInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""009b2555-0147-4d41-8d61-238b4d350e9e"",
-                    ""path"": ""<Keyboard>/upArrow"",
+                    ""id"": ""82f4f4b5-d6d5-49c2-9b7d-2a653c84d417"",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Flipper Top"",
+                    ""action"": ""Flipper Right"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""cd117d69-cd4e-4030-8d5f-0f0c883cd0ad"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""id"": ""20d10f88-fe8f-41e7-806d-59053d3d3651"",
+                    ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Launch Ball"",
+                    ""action"": ""Flipper Left"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5d68fb40-5674-4751-a78d-0be556555a6d"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Flipper Left"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -116,10 +118,9 @@ public partial class @PinballInput: IInputActionCollection2, IDisposable
 }");
         // Default
         m_Default = asset.FindActionMap("Default", throwIfNotFound: true);
-        m_Default_FlipperLeft = m_Default.FindAction("Flipper Left", throwIfNotFound: true);
-        m_Default_FlipperRight = m_Default.FindAction("Flipper Right", throwIfNotFound: true);
-        m_Default_FlipperTop = m_Default.FindAction("Flipper Top", throwIfNotFound: true);
         m_Default_LaunchBall = m_Default.FindAction("Launch Ball", throwIfNotFound: true);
+        m_Default_FlipperRight = m_Default.FindAction("Flipper Right", throwIfNotFound: true);
+        m_Default_FlipperLeft = m_Default.FindAction("Flipper Left", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -181,18 +182,16 @@ public partial class @PinballInput: IInputActionCollection2, IDisposable
     // Default
     private readonly InputActionMap m_Default;
     private List<IDefaultActions> m_DefaultActionsCallbackInterfaces = new List<IDefaultActions>();
-    private readonly InputAction m_Default_FlipperLeft;
-    private readonly InputAction m_Default_FlipperRight;
-    private readonly InputAction m_Default_FlipperTop;
     private readonly InputAction m_Default_LaunchBall;
+    private readonly InputAction m_Default_FlipperRight;
+    private readonly InputAction m_Default_FlipperLeft;
     public struct DefaultActions
     {
         private @PinballInput m_Wrapper;
         public DefaultActions(@PinballInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @FlipperLeft => m_Wrapper.m_Default_FlipperLeft;
-        public InputAction @FlipperRight => m_Wrapper.m_Default_FlipperRight;
-        public InputAction @FlipperTop => m_Wrapper.m_Default_FlipperTop;
         public InputAction @LaunchBall => m_Wrapper.m_Default_LaunchBall;
+        public InputAction @FlipperRight => m_Wrapper.m_Default_FlipperRight;
+        public InputAction @FlipperLeft => m_Wrapper.m_Default_FlipperLeft;
         public InputActionMap Get() { return m_Wrapper.m_Default; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -202,34 +201,28 @@ public partial class @PinballInput: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_DefaultActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_DefaultActionsCallbackInterfaces.Add(instance);
-            @FlipperLeft.started += instance.OnFlipperLeft;
-            @FlipperLeft.performed += instance.OnFlipperLeft;
-            @FlipperLeft.canceled += instance.OnFlipperLeft;
-            @FlipperRight.started += instance.OnFlipperRight;
-            @FlipperRight.performed += instance.OnFlipperRight;
-            @FlipperRight.canceled += instance.OnFlipperRight;
-            @FlipperTop.started += instance.OnFlipperTop;
-            @FlipperTop.performed += instance.OnFlipperTop;
-            @FlipperTop.canceled += instance.OnFlipperTop;
             @LaunchBall.started += instance.OnLaunchBall;
             @LaunchBall.performed += instance.OnLaunchBall;
             @LaunchBall.canceled += instance.OnLaunchBall;
+            @FlipperRight.started += instance.OnFlipperRight;
+            @FlipperRight.performed += instance.OnFlipperRight;
+            @FlipperRight.canceled += instance.OnFlipperRight;
+            @FlipperLeft.started += instance.OnFlipperLeft;
+            @FlipperLeft.performed += instance.OnFlipperLeft;
+            @FlipperLeft.canceled += instance.OnFlipperLeft;
         }
 
         private void UnregisterCallbacks(IDefaultActions instance)
         {
-            @FlipperLeft.started -= instance.OnFlipperLeft;
-            @FlipperLeft.performed -= instance.OnFlipperLeft;
-            @FlipperLeft.canceled -= instance.OnFlipperLeft;
-            @FlipperRight.started -= instance.OnFlipperRight;
-            @FlipperRight.performed -= instance.OnFlipperRight;
-            @FlipperRight.canceled -= instance.OnFlipperRight;
-            @FlipperTop.started -= instance.OnFlipperTop;
-            @FlipperTop.performed -= instance.OnFlipperTop;
-            @FlipperTop.canceled -= instance.OnFlipperTop;
             @LaunchBall.started -= instance.OnLaunchBall;
             @LaunchBall.performed -= instance.OnLaunchBall;
             @LaunchBall.canceled -= instance.OnLaunchBall;
+            @FlipperRight.started -= instance.OnFlipperRight;
+            @FlipperRight.performed -= instance.OnFlipperRight;
+            @FlipperRight.canceled -= instance.OnFlipperRight;
+            @FlipperLeft.started -= instance.OnFlipperLeft;
+            @FlipperLeft.performed -= instance.OnFlipperLeft;
+            @FlipperLeft.canceled -= instance.OnFlipperLeft;
         }
 
         public void RemoveCallbacks(IDefaultActions instance)
@@ -249,9 +242,8 @@ public partial class @PinballInput: IInputActionCollection2, IDisposable
     public DefaultActions @Default => new DefaultActions(this);
     public interface IDefaultActions
     {
-        void OnFlipperLeft(InputAction.CallbackContext context);
-        void OnFlipperRight(InputAction.CallbackContext context);
-        void OnFlipperTop(InputAction.CallbackContext context);
         void OnLaunchBall(InputAction.CallbackContext context);
+        void OnFlipperRight(InputAction.CallbackContext context);
+        void OnFlipperLeft(InputAction.CallbackContext context);
     }
 }
