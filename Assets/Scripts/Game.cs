@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Game : MonoBehaviour {
-    private PinballInput input;
+    [HideInInspector] public PinballInput input;
     public Flipper flipperLeft;
     public Flipper flipperRight;
     public Ball ball;
 
-    void Start() {
+    public static Game Instance 
+        { get; private set; }
+
+    void Awake() {
         input = new PinballInput();
         input.Enable();
+        Instance = this;
     }
 
     void Update() {
