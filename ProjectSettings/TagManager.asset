@@ -9,6 +9,7 @@ TagManager:
   - Ball
   - BallStart
   - BallEnd
+  - ScoreCircle
   layers:
   - Default
   - TransparentFX

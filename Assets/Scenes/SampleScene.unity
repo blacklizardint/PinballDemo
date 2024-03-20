@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17285311, g: 0.21600924, b: 0.29796234, a: 1}
+  m_IndirectSpecularColor: {r: 0.17285351, g: 0.2160097, b: 0.2979636, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1035,6 +1035,7 @@ GameObject:
   - component: {fileID: 229364948}
   - component: {fileID: 229364950}
   - component: {fileID: 229364949}
+  - component: {fileID: 229364951}
   m_Layer: 5
   m_Name: Current Score
   m_TagString: Untagged
@@ -1158,6 +1159,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 229364947}
   m_CullTransparentMesh: 1
+--- !u!114 &229364951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229364947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85e1d49367c80b408ed1574048809df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highScore: {fileID: 1412839305}
 --- !u!1 &248415367
 GameObject:
   m_ObjectHideFlags: 0
@@ -11671,7 +11685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.51687396, b: 0, a: 1}
+  m_Color: {r: 0.2830189, g: 0.1465039, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13730,7 +13744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.51687396, b: 0, a: 1}
+  m_Color: {r: 0.2830189, g: 0.1465039, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15385,6 +15399,7 @@ MonoBehaviour:
   flipperLeft: {fileID: 798758015}
   flipperRight: {fileID: 1444129381}
   ball: {fileID: 8958942976924875954}
+  score: {fileID: 0}
 --- !u!4 &1045850264
 Transform:
   m_ObjectHideFlags: 0
@@ -16001,7 +16016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.51687396, b: 0, a: 1}
+  m_Color: {r: 0.2830189, g: 0.1465039, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -16761,6 +16776,7 @@ GameObject:
   - component: {fileID: 1412839302}
   - component: {fileID: 1412839304}
   - component: {fileID: 1412839303}
+  - component: {fileID: 1412839305}
   m_Layer: 5
   m_Name: High Score
   m_TagString: Untagged
@@ -16884,6 +16900,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412839301}
   m_CullTransparentMesh: 1
+--- !u!114 &1412839305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412839301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 645daa8427102384781b0095fe0c1c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1414125704
 GameObject:
   m_ObjectHideFlags: 0
@@ -16935,7 +16963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.51687396, b: 0, a: 1}
+  m_Color: {r: 0.2830189, g: 0.1465039, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -19174,7 +19202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1785426223
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20795,7 +20823,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2007661367
 RectTransform:
   m_ObjectHideFlags: 0

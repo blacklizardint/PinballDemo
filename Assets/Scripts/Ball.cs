@@ -11,7 +11,7 @@ public class Ball : MonoBehaviour {
     // private fields
     private Rigidbody rb;
     private int lives;
-    private const int MAX_LIVES = 0;
+    private const int MAX_LIVES = 10000;
 
     void Start() {
         lives = MAX_LIVES;
@@ -19,7 +19,8 @@ public class Ball : MonoBehaviour {
     }
 
     public void Launch() {
-        rb.AddForce(Vector3.forward * launchForce, ForceMode.Impulse);
+        float actualLaunchForce = Random.Range(launchForce * 0.8f, launchForce * 1.2f);
+        rb.AddForce(Vector3.forward * actualLaunchForce, ForceMode.Impulse);
     }
     public void Restart() {
         transform.position = GameObject.FindGameObjectWithTag("BallStart").transform.position;
@@ -39,10 +40,20 @@ public class Ball : MonoBehaviour {
         }
     }
     private void OnCollisionEnter(Collision collision) {
-        print("you collided");
         var bumper = collision.gameObject.GetComponent<Bumper>();
         if (bumper != null) {
             bumper.Bump();
+            Game.Instance.AddScore(100);
+        }
+        else {
+            if (collision.gameObject.tag.StartsWith("Flipper")) {
+                Game.Instance.AddScore(10);
+            }
+            else if (collision.gameObject.CompareTag("ScoreCircle")) {
+                print("here");
+                int score = collision.gameObject.GetComponent<ScoreCircle>().isActive ? 100_000 : 5;
+                Game.Instance.AddScore(score);
+            }
         }
     }
 }

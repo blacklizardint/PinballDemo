@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bumper : MonoBehaviour {
-    private ParticleSystem ps;
     private Renderer ren;
     private float t;
 
     void Start() {
-        ps = GetComponentInChildren<ParticleSystem>();
         ren = GetComponent<Renderer>();
         t = 0;
     }
@@ -25,7 +23,6 @@ public class Bumper : MonoBehaviour {
     }
 
     public void Bump() {
-        ps.Play();
         ren.material.SetColor("_BaseColor", Color.green);
         t = 1;
     }

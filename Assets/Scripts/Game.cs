@@ -7,6 +7,7 @@ public class Game : MonoBehaviour {
     public Flipper flipperLeft;
     public Flipper flipperRight;
     public Ball ball;
+    public Score score;
 
     public static Game Instance 
         { get; private set; }
@@ -27,5 +28,9 @@ public class Game : MonoBehaviour {
         else if (input.Default.LaunchBall.WasReleasedThisFrame()) {
             ball.Launch();
         }
+    }
+
+    public void AddScore(int amount) {
+        score.AddScore(amount);
     }
 }

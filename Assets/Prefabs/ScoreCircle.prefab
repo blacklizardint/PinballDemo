@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -139331602, guid: dcfdd5ad62ab74fa58f158304824fc17, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4764151, g: 1, b: 0.9753607, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -95,9 +95,10 @@ GameObject:
   - component: {fileID: 1242620494875938739}
   - component: {fileID: 4911376131006819630}
   - component: {fileID: 3045146467623081144}
+  - component: {fileID: 2319472226191722065}
   m_Layer: 0
   m_Name: ScoreCircle
-  m_TagString: Untagged
+  m_TagString: ScoreCircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -186,12 +187,25 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 1.1900003
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2319472226191722065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6212215705113540389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0ba5af496822b49aa898f6481dc3d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRen: {fileID: 9029140143618202149}
 --- !u!1 &7179901028792567862
 GameObject:
   m_ObjectHideFlags: 0
