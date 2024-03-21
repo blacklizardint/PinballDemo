@@ -10,6 +10,8 @@ TagManager:
   - BallStart
   - BallEnd
   - ScoreCircle
+  - RampStart
+  - RampHole
   layers:
   - Default
   - TransparentFX
