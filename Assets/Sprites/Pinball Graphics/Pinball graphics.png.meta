@@ -307,7 +307,7 @@ TextureImporter:
         width: 178
         height: 178
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -315,6 +315,27 @@ TextureImporter:
       bones: []
       spriteID: a792c78c04ec8486d943cac62f89bf81
       internalID: -2026072551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pinball graphics_UI Hit
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 17
+        width: 675
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d13606e70b37b4fdc9ad800bcc089357
+      internalID: -71240231
       vertices: []
       indices: 
       edges: []
@@ -343,6 +364,7 @@ TextureImporter:
       Pinball graphics_6: 1254052221
       Pinball graphics_8: -63537624
       Pinball graphics_9: 1136558010
+      Pinball graphics_UI Hit: -71240231
       Pinball graphics_circle: -139331602
       Pinball graphics_rectangle: 804154123
       Pinball graphics_rounded rect: -1272412852
