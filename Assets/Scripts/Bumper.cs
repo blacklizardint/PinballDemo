@@ -1,17 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Bumper : MonoBehaviour {
+    // private fields
     private Renderer ren;
     private float t;
 
-    void Start() {
+    // Life Cycle methods
+    private void Start() {
         ren = GetComponent<Renderer>();
         t = 0;
     }
-
-    void Update() {
+    private void Update() {
         if (t > 0) {
             Color color = Color.Lerp(Color.yellow, Color.green, t);
             ren.material.SetColor("_BaseColor", color);
@@ -22,6 +21,7 @@ public class Bumper : MonoBehaviour {
         }
     }
 
+    // Other methods
     public void Bump() {
         ren.material.SetColor("_BaseColor", Color.green);
         t = 1;

@@ -3203,7 +3203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b85e1d49367c80b408ed1574048809df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highScore: {fileID: 1412839305}
+  type: 0
 --- !u!1 &248415367
 GameObject:
   m_ObjectHideFlags: 0
@@ -19486,7 +19486,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8958942976924875954}
         m_TargetAssemblyTypeName: Ball, Assembly-CSharp
-        m_MethodName: Restart
+        m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19498,7 +19498,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 469364304}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: Restart
+        m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20901,6 +20901,7 @@ GameObject:
   - component: {fileID: 650893672}
   - component: {fileID: 650893674}
   - component: {fileID: 650893673}
+  - component: {fileID: 650893675}
   m_Layer: 5
   m_Name: InGame Current Score
   m_TagString: Untagged
@@ -21024,6 +21025,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650893671}
   m_CullTransparentMesh: 1
+--- !u!114 &650893675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650893671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85e1d49367c80b408ed1574048809df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
 --- !u!43 &655593703
 Mesh:
   m_ObjectHideFlags: 0
@@ -22461,18 +22475,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4826263370124227201}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &798758015 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6961774402154810645, guid: eb2eab76a6bf448e18783441dececb3d,
-    type: 3}
-  m_PrefabInstance: {fileID: 4826263370124227201}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fab6bee70bd0fa749ba7811b45602fde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!43 &803980268
 Mesh:
   m_ObjectHideFlags: 0
@@ -25157,10 +25159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68c97a367a082c64880dba3b966612ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flipperLeft: {fileID: 798758015}
-  flipperRight: {fileID: 1444129381}
   ball: {fileID: 8958942976924875954}
-  score: {fileID: 0}
 --- !u!4 &1045850264
 Transform:
   m_ObjectHideFlags: 0
@@ -27160,9 +27159,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1412839301}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 645daa8427102384781b0095fe0c1c1d, type: 3}
+  m_Script: {fileID: 11500000, guid: b85e1d49367c80b408ed1574048809df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 1
 --- !u!1 &1414125704
 GameObject:
   m_ObjectHideFlags: 0
@@ -27410,18 +27410,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3539667279294447473}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1444129381 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 450059227986618124, guid: 740c5a56d7b5a4c478a49e2f0bd9d1cb,
-    type: 3}
-  m_PrefabInstance: {fileID: 3539667279294447473}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fab6bee70bd0fa749ba7811b45602fde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1449148626
 GameObject:
   m_ObjectHideFlags: 0
@@ -41195,6 +41183,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Flipper Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 450059227986618124, guid: 740c5a56d7b5a4c478a49e2f0bd9d1cb,
+        type: 3}
+      propertyPath: type
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1227260023658524570, guid: 740c5a56d7b5a4c478a49e2f0bd9d1cb,
         type: 3}

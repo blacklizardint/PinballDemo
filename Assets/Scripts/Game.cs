@@ -1,36 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Game : MonoBehaviour {
-    [HideInInspector] public PinballInput input;
-    public Flipper flipperLeft;
-    public Flipper flipperRight;
+    // set in inspector
     public Ball ball;
-    public Score score;
 
-    public static Game Instance 
-        { get; private set; }
+    // other fields and properties
+    [HideInInspector] public PinballInput input;
 
-    void Awake() {
+    public static Game Instance { get; private set; }
+    public int CurScore { get; private set; }
+    public int HighScore { get; private set; }
+
+    // Life Cycle methods
+    private void Awake() {
         input = new PinballInput();
         input.Enable();
         Instance = this;
     }
-
-    void Update() {
-        if (input.Default.FlipperLeft.WasPressedThisFrame()) {
-            flipperLeft.Flip();
-        }
-        else if (input.Default.FlipperRight.WasPressedThisFrame()) {
-            flipperRight.Flip();
-        }
-        else if (input.Default.LaunchBall.WasReleasedThisFrame()) {
-            ball.Launch();
-        }
+    private void Start() {
+        HighScore = PlayerPrefs.GetInt(Consts.PlayerPrefs.HIGHSCORE, 0);
+    }
+    private void OnDisable() {
+        PlayerPrefs.SetInt(Consts.PlayerPrefs.HIGHSCORE, HighScore);
     }
 
+    // Other methods
     public void AddScore(int amount) {
-        score.AddScore(amount);
+        CurScore += amount;
+        if (CurScore > HighScore) {
+            HighScore = CurScore;
+        }
     }
 }

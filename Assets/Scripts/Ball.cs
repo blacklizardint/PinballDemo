@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -11,49 +9,65 @@ public class Ball : MonoBehaviour {
     // private fields
     private Rigidbody rb;
     private int lives;
-    private const int MAX_LIVES = 10000;
+    private bool canBeLaunced;
 
-    void Start() {
+    private const int MAX_LIVES = 3;
+
+    // Life Cycle methods
+    private void Start() {
         lives = MAX_LIVES;
         rb = GetComponent<Rigidbody>();
+        canBeLaunced = true;
     }
-
-    public void Launch() {
-        float actualLaunchForce = Random.Range(launchForce * 0.8f, launchForce * 1.2f);
-        rb.AddForce(Vector3.forward * actualLaunchForce, ForceMode.Impulse);
+    private void Update() {
+        var input = Game.Instance.input;
+        if (canBeLaunced && input.Default.LaunchBall.WasReleasedThisFrame()) {
+            Launch();
+            canBeLaunced = false;
+        }
     }
-    public void Restart() {
-        transform.position = GameObject.FindGameObjectWithTag("BallStart").transform.position;
-        rb.velocity = Vector3.zero;
-        lives = MAX_LIVES;
-    }
-
     private void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("BallEnd")) {
-            transform.position = GameObject.FindGameObjectWithTag("BallStart").transform.position;
-            rb.velocity = Vector3.zero;
-            lives--;
-            print($"number of balls left: {lives}");
-            if (lives < 0) {
-                menu.GameOver();
-            }
+        if (other.CompareTag(Consts.Tags.BALL_END)) {
+            ResetBall();
+        }
+        else if (other.CompareTag(Consts.Tags.SCORE_CIRCLE)) {
+            bool scoreCircleActive = other.gameObject.GetComponent<ScoreCircle>().isActive;
+            int score = scoreCircleActive ? Consts.Points.HIT_SCORE_CIRCLE_ACTIVE : Consts.Points.HIT_SCORE_CIRCLE_NORMAL;
+            Game.Instance.AddScore(score);
         }
     }
     private void OnCollisionEnter(Collision collision) {
         var bumper = collision.gameObject.GetComponent<Bumper>();
         if (bumper != null) {
             bumper.Bump();
-            Game.Instance.AddScore(100);
+            Game.Instance.AddScore(Consts.Points.HIT_BUMPER);
         }
         else {
-            if (collision.gameObject.tag.StartsWith("Flipper")) {
-                Game.Instance.AddScore(10);
-            }
-            else if (collision.gameObject.CompareTag("ScoreCircle")) {
-                print("here");
-                int score = collision.gameObject.GetComponent<ScoreCircle>().isActive ? 100_000 : 5;
-                Game.Instance.AddScore(score);
+            if (collision.gameObject.tag.StartsWith(Consts.Tags.FLIPPER)) {
+                Game.Instance.AddScore(Consts.Points.HIT_FLIPPER);
             }
         }
+    }
+
+    // Other methods
+    public void Launch() {
+        float actualLaunchForce = Random.Range(launchForce * 0.8f, launchForce * 1.2f);
+        rb.AddForce(Vector3.forward * actualLaunchForce, ForceMode.Impulse);
+        canBeLaunced = false;
+    }
+    public void ResetBall() {
+        transform.position = GameObject.FindGameObjectWithTag(Consts.Tags.BALL_START).transform.position;
+        rb.velocity = Vector3.zero;
+        lives--;
+        if (lives < 0) {
+            menu.GameOver();
+        }
+        canBeLaunced = true;
+    }
+    public void RestartGame() {
+        transform.position = GameObject.FindGameObjectWithTag(Consts.Tags.BALL_START).transform.position;
+        rb.velocity = Vector3.zero;
+        lives = MAX_LIVES;
+        canBeLaunced = false;
     }
 }
