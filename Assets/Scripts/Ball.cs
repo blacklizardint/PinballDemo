@@ -5,13 +5,14 @@ public class Ball : MonoBehaviour {
     // set in inspector
     public float launchForce;
     public Menu menu;
+    public GameObject[] ballLives;
 
     // private fields
     private Rigidbody rb;
     private int lives;
     private bool canBeLaunced;
 
-    private const int MAX_LIVES = 3;
+    private const int MAX_LIVES = 4;
 
     // Life Cycle methods
     private void Start() {
@@ -58,8 +59,9 @@ public class Ball : MonoBehaviour {
     public void ResetBall() {
         transform.position = GameObject.FindGameObjectWithTag(Consts.Tags.BALL_START).transform.position;
         rb.velocity = Vector3.zero;
+        ballLives[MAX_LIVES - lives].SetActive(false);
         lives--;
-        if (lives < 0) {
+        if (lives <= 0) {
             menu.GameOver();
         }
         canBeLaunced = true;
@@ -68,6 +70,9 @@ public class Ball : MonoBehaviour {
         transform.position = GameObject.FindGameObjectWithTag(Consts.Tags.BALL_START).transform.position;
         rb.velocity = Vector3.zero;
         lives = MAX_LIVES;
-        canBeLaunced = false;
+        for (int i = 0; i < MAX_LIVES; i++) {
+            ballLives[i].SetActive(true);
+        }
+        canBeLaunced = true;
     }
 }

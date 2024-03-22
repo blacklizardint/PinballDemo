@@ -12,8 +12,8 @@ public static class Consts {
     }
     public static class Points {
         public const int HIT_BUMPER = 100;
-        public const int HIT_FLIPPER = 100;
-        public const int HIT_SCORE_CIRCLE_NORMAL = 100;
-        public const int HIT_SCORE_CIRCLE_ACTIVE = 100;
+        public const int HIT_FLIPPER = 10;
+        public const int HIT_SCORE_CIRCLE_NORMAL = 150;
+        public const int HIT_SCORE_CIRCLE_ACTIVE = 500;
     }
 }

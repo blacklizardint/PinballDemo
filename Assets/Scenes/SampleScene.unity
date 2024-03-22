@@ -41969,6 +41969,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchForce: 20
   menu: {fileID: 469364304}
+  ballLives:
+  - {fileID: 1919112234}
+  - {fileID: 1547558664}
+  - {fileID: 1602056192}
+  - {fileID: 763069213}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
