@@ -10,7 +10,7 @@ public class ScoreCircle : MonoBehaviour {
     private readonly Color inactiveColor = new Color(45 / 255.0f, 97 / 255.0f, 108 / 255.0f);
     private readonly Color activeColor = new Color(121 / 255.0f, 255 / 255.0f, 249 / 255.0f);
     private const float MIN_SWITCH_TIME = 3.0f;
-    private const float MAX_SWITCH_TIME = 3.0f;
+    private const float MAX_SWITCH_TIME = 10.0f;
     private float timeTilSwitch;
     private AudioSource audioSrc;
     private ParticleSystem ps;

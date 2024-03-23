@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1241471065173377424}
   - component: {fileID: 9029140143618202149}
   m_Layer: 0
-  m_Name: ScoreCircle (1)
+  m_Name: ScoreCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -206,8 +206,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRen: {fileID: 9029140143618202149}
-  activeSound: {fileID: 0}
-  inactiveSound: {fileID: 0}
+  activeSound: {fileID: 8300000, guid: fe4b38027f9d115428842c181dfcef11, type: 3}
+  inactiveSound: {fileID: 8300000, guid: bbc9dd4da00516144bd070f87f9f0868, type: 3}
   isActive: 0
 --- !u!1 &7179901028792567862
 GameObject:

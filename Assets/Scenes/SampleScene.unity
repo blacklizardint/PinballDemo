@@ -736,6 +736,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1344382082922753031, guid: 0a855813f57c44a5d97ff2d5828d94ef,
+        type: 3}
+      propertyPath: m_Name
+      value: ScoreCircle 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319472226191722065, guid: 0a855813f57c44a5d97ff2d5828d94ef,
+        type: 3}
+      propertyPath: spriteRen
+      value: 
+      objectReference: {fileID: 515805340}
     - target: {fileID: 2319472226191722065, guid: 0a855813f57c44a5d97ff2d5828d94ef,
         type: 3}
       propertyPath: activeSound
@@ -749,7 +759,7 @@ PrefabInstance:
     - target: {fileID: 6212215705113540389, guid: 0a855813f57c44a5d97ff2d5828d94ef,
         type: 3}
       propertyPath: m_Name
-      value: ScoreCircle (2)
+      value: ScoreCircle 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19864,6 +19874,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!212 &515805340 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9029140143618202149, guid: 0a855813f57c44a5d97ff2d5828d94ef,
+    type: 3}
+  m_PrefabInstance: {fileID: 129029310}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &516975857
 GameObject:
   m_ObjectHideFlags: 0
@@ -22825,6 +22841,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1344382082922753031, guid: 0a855813f57c44a5d97ff2d5828d94ef,
+        type: 3}
+      propertyPath: m_Name
+      value: ScoreCircle 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319472226191722065, guid: 0a855813f57c44a5d97ff2d5828d94ef,
+        type: 3}
+      propertyPath: spriteRen
+      value: 
+      objectReference: {fileID: 791493247}
     - target: {fileID: 2319472226191722065, guid: 0a855813f57c44a5d97ff2d5828d94ef,
         type: 3}
       propertyPath: activeSound
@@ -22838,7 +22864,7 @@ PrefabInstance:
     - target: {fileID: 6212215705113540389, guid: 0a855813f57c44a5d97ff2d5828d94ef,
         type: 3}
       propertyPath: m_Name
-      value: ScoreCircle (3)
+      value: ScoreCircle 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23006,11 +23032,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766493387}
   m_CullTransparentMesh: 1
+--- !u!212 &791493247 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9029140143618202149, guid: 0a855813f57c44a5d97ff2d5828d94ef,
+    type: 3}
+  m_PrefabInstance: {fileID: 753851826}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &798758009 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6309025368503678639, guid: eb2eab76a6bf448e18783441dececb3d,
     type: 3}
   m_PrefabInstance: {fileID: 4826263370124227201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &812467813 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9029140143618202149, guid: 0a855813f57c44a5d97ff2d5828d94ef,
+    type: 3}
+  m_PrefabInstance: {fileID: 1220607431}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &841049803
 GameObject:
@@ -26133,6 +26171,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1344382082922753031, guid: 0a855813f57c44a5d97ff2d5828d94ef,
+        type: 3}
+      propertyPath: m_Name
+      value: ScoreCircle 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319472226191722065, guid: 0a855813f57c44a5d97ff2d5828d94ef,
+        type: 3}
+      propertyPath: spriteRen
+      value: 
+      objectReference: {fileID: 1936981453}
     - target: {fileID: 2319472226191722065, guid: 0a855813f57c44a5d97ff2d5828d94ef,
         type: 3}
       propertyPath: activeSound
@@ -26146,7 +26194,7 @@ PrefabInstance:
     - target: {fileID: 6212215705113540389, guid: 0a855813f57c44a5d97ff2d5828d94ef,
         type: 3}
       propertyPath: m_Name
-      value: ScoreCircle (5)
+      value: ScoreCircle 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26381,6 +26429,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1344382082922753031, guid: 0a855813f57c44a5d97ff2d5828d94ef,
+        type: 3}
+      propertyPath: m_Name
+      value: ScoreCircle 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319472226191722065, guid: 0a855813f57c44a5d97ff2d5828d94ef,
+        type: 3}
+      propertyPath: spriteRen
+      value: 
+      objectReference: {fileID: 1656784596}
     - target: {fileID: 2319472226191722065, guid: 0a855813f57c44a5d97ff2d5828d94ef,
         type: 3}
       propertyPath: activeSound
@@ -26394,7 +26452,7 @@ PrefabInstance:
     - target: {fileID: 6212215705113540389, guid: 0a855813f57c44a5d97ff2d5828d94ef,
         type: 3}
       propertyPath: m_Name
-      value: ScoreCircle (6)
+      value: ScoreCircle 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27033,6 +27091,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1344382082922753031, guid: 0a855813f57c44a5d97ff2d5828d94ef,
+        type: 3}
+      propertyPath: m_Name
+      value: ScoreCircle 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319472226191722065, guid: 0a855813f57c44a5d97ff2d5828d94ef,
+        type: 3}
+      propertyPath: spriteRen
+      value: 
+      objectReference: {fileID: 812467813}
     - target: {fileID: 2319472226191722065, guid: 0a855813f57c44a5d97ff2d5828d94ef,
         type: 3}
       propertyPath: activeSound
@@ -27046,7 +27114,7 @@ PrefabInstance:
     - target: {fileID: 6212215705113540389, guid: 0a855813f57c44a5d97ff2d5828d94ef,
         type: 3}
       propertyPath: m_Name
-      value: ScoreCircle (1)
+      value: ScoreCircle 5
       objectReference: {fileID: 0}
     - target: {fileID: 9029140143618202149, guid: 0a855813f57c44a5d97ff2d5828d94ef,
         type: 3}
@@ -29678,6 +29746,18 @@ Transform:
   - {fileID: 70400819}
   m_Father: {fileID: 44654482}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1627225278 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9029140143618202149, guid: 0a855813f57c44a5d97ff2d5828d94ef,
+    type: 3}
+  m_PrefabInstance: {fileID: 7086984105850275467}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1656784596 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9029140143618202149, guid: 0a855813f57c44a5d97ff2d5828d94ef,
+    type: 3}
+  m_PrefabInstance: {fileID: 1153703807}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1658274752
 Mesh:
   m_ObjectHideFlags: 0
@@ -40503,6 +40583,16 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 9c476abbb71424959accda15278ef00a, type: 3}
+    - target: {fileID: 1787368298881497852, guid: eb2eab76a6bf448e18783441dececb3d,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488686840051567291, guid: eb2eab76a6bf448e18783441dececb3d,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2518664731026946507, guid: eb2eab76a6bf448e18783441dececb3d,
         type: 3}
       propertyPath: m_Mesh
@@ -40854,6 +40944,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919112234}
   m_CullTransparentMesh: 1
+--- !u!212 &1936981453 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9029140143618202149, guid: 0a855813f57c44a5d97ff2d5828d94ef,
+    type: 3}
+  m_PrefabInstance: {fileID: 1127020342}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1957174943 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6212215705113540389, guid: 0a855813f57c44a5d97ff2d5828d94ef,
@@ -41097,6 +41193,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1344382082922753031, guid: 0a855813f57c44a5d97ff2d5828d94ef,
+        type: 3}
+      propertyPath: m_Name
+      value: ScoreCircle 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319472226191722065, guid: 0a855813f57c44a5d97ff2d5828d94ef,
+        type: 3}
+      propertyPath: spriteRen
+      value: 
+      objectReference: {fileID: 2046666629}
     - target: {fileID: 2319472226191722065, guid: 0a855813f57c44a5d97ff2d5828d94ef,
         type: 3}
       propertyPath: activeSound
@@ -41110,7 +41216,7 @@ PrefabInstance:
     - target: {fileID: 6212215705113540389, guid: 0a855813f57c44a5d97ff2d5828d94ef,
         type: 3}
       propertyPath: m_Name
-      value: ScoreCircle (4)
+      value: ScoreCircle 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -42084,6 +42190,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 44654482}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!212 &2046666629 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9029140143618202149, guid: 0a855813f57c44a5d97ff2d5828d94ef,
+    type: 3}
+  m_PrefabInstance: {fileID: 1963432636}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2049322659
 GameObject:
   m_ObjectHideFlags: 0
@@ -42793,6 +42905,11 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: e1947fd0358654ff49b88dd5e11ce3b8, type: 3}
+    - target: {fileID: 207232589908814079, guid: 740c5a56d7b5a4c478a49e2f0bd9d1cb,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 450059227986618124, guid: 740c5a56d7b5a4c478a49e2f0bd9d1cb,
         type: 3}
       propertyPath: type
@@ -42858,6 +42975,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 191214071}
+    - target: {fileID: 2137344918343310010, guid: 740c5a56d7b5a4c478a49e2f0bd9d1cb,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -42996,6 +43118,16 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 9c476abbb71424959accda15278ef00a, type: 3}
+    - target: {fileID: 1787368298881497852, guid: eb2eab76a6bf448e18783441dececb3d,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488686840051567291, guid: eb2eab76a6bf448e18783441dececb3d,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2518664731026946507, guid: eb2eab76a6bf448e18783441dececb3d,
         type: 3}
       propertyPath: m_Mesh
@@ -43124,6 +43256,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1344382082922753031, guid: 0a855813f57c44a5d97ff2d5828d94ef,
+        type: 3}
+      propertyPath: m_Name
+      value: ScoreCircle 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319472226191722065, guid: 0a855813f57c44a5d97ff2d5828d94ef,
+        type: 3}
+      propertyPath: spriteRen
+      value: 
+      objectReference: {fileID: 1627225278}
     - target: {fileID: 2319472226191722065, guid: 0a855813f57c44a5d97ff2d5828d94ef,
         type: 3}
       propertyPath: activeSound
@@ -43137,12 +43279,12 @@ PrefabInstance:
     - target: {fileID: 6212215705113540389, guid: 0a855813f57c44a5d97ff2d5828d94ef,
         type: 3}
       propertyPath: m_Name
-      value: ScoreCircle
+      value: ScoreCircle 1
       objectReference: {fileID: 0}
     - target: {fileID: 7179901028792567862, guid: 0a855813f57c44a5d97ff2d5828d94ef,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8923700244591511651, guid: 0a855813f57c44a5d97ff2d5828d94ef,
         type: 3}
