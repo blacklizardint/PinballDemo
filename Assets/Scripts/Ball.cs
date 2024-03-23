@@ -20,6 +20,7 @@ public class Ball : MonoBehaviour {
     private void Start() {
         lives = MAX_LIVES;
         rb = GetComponent<Rigidbody>();
+        audioSrc = GetComponent<AudioSource>();
         canBeLaunced = true;
     }
     private void Update() {
@@ -31,12 +32,12 @@ public class Ball : MonoBehaviour {
     }
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag(Consts.Tags.BALL_END)) {
+            other.gameObject.GetComponent<AudioSource>().Play();
             ResetBall();
         }
         else if (other.CompareTag(Consts.Tags.SCORE_CIRCLE)) {
-            bool scoreCircleActive = other.gameObject.GetComponent<ScoreCircle>().isActive;
-            int score = scoreCircleActive ? Consts.Points.HIT_SCORE_CIRCLE_ACTIVE : Consts.Points.HIT_SCORE_CIRCLE_NORMAL;
-            Game.Instance.AddScore(score);
+            var scoreCircle = other.GetComponent<ScoreCircle>();
+            scoreCircle.Hit();
         }
     }
     private void OnCollisionEnter(Collision collision) {

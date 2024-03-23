@@ -19,6 +19,7 @@ public class Flipper : MonoBehaviour {
     // Life Cycle methods
     private void Start() {
         rb = GetComponent<Rigidbody>();
+        audioSrc = GetComponent<AudioSource>();
     }
 
     private void Update() {

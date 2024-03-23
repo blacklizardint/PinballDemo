@@ -10,6 +10,7 @@ public class Bumper : MonoBehaviour {
     // Life Cycle methods
     private void Start() {
         ren = GetComponent<Renderer>();
+        audioSrc = GetComponent<AudioSource>();
         t = 0;
     }
     private void Update() {
