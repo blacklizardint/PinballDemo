@@ -5,7 +5,8 @@ public enum FlipperType {
     RIGHT,
 }
 
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Rigidbody)),
+RequireComponent(typeof(AudioSource))]
 public class Flipper : MonoBehaviour {
     // set in inspector
     public FlipperType type;
@@ -13,6 +14,7 @@ public class Flipper : MonoBehaviour {
 
     // private fields
     private Rigidbody rb;
+    private AudioSource audioSrc;
 
     // Life Cycle methods
     private void Start() {
@@ -32,5 +34,6 @@ public class Flipper : MonoBehaviour {
     // Other methods
     public void Flip() {
         rb.AddForce(Vector3.forward * force, ForceMode.Impulse);
+        audioSrc.Play();
     }
 }

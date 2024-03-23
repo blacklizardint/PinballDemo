@@ -1,8 +1,10 @@
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class Bumper : MonoBehaviour {
     // private fields
     private Renderer ren;
+    private AudioSource audioSrc;
     private float t;
 
     // Life Cycle methods
@@ -25,5 +27,6 @@ public class Bumper : MonoBehaviour {
     public void Bump() {
         ren.material.SetColor("_BaseColor", Color.green);
         t = 1;
+        audioSrc.Play();
     }
 }

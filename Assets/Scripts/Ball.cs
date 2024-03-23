@@ -1,6 +1,7 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Rigidbody)),
+    RequireComponent(typeof(AudioSource))]
 public class Ball : MonoBehaviour {
     // set in inspector
     public float launchForce;
@@ -9,6 +10,7 @@ public class Ball : MonoBehaviour {
 
     // private fields
     private Rigidbody rb;
+    private AudioSource audioSrc;
     private int lives;
     private bool canBeLaunced;
 
@@ -55,6 +57,7 @@ public class Ball : MonoBehaviour {
         float actualLaunchForce = Random.Range(launchForce * 0.8f, launchForce * 1.2f);
         rb.AddForce(Vector3.forward * actualLaunchForce, ForceMode.Impulse);
         canBeLaunced = false;
+        audioSrc.Play();
     }
     public void ResetBall() {
         transform.position = GameObject.FindGameObjectWithTag(Consts.Tags.BALL_START).transform.position;
